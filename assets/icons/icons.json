@@ -1,16 +1,16 @@
 {
  "source": {
   "kind": "file",
-  "ref": "assets/img/vask-transfer-services-icon.svg"
+  "ref": "assets/img/vask-transfer-services-icon.png"
  },
- "source_md5": "87c3754cf3c743979baa2e0ae87a963a",
- "version": "b28372e7",
+ "source_md5": "69e9086238b9aed5674024e967d0a630",
+ "version": "495de8fc",
  "tile": null,
  "crop": null,
  "header": [
-  "inline",
-  "index.html",
-  "27f514a11fc5c3678582039f7ec8195c"
+  "file",
+  "assets/img/vask-transfer-services-logo-160.webp",
+  "24791af7a7bdd32467e5d8be27e90fd8"
  ],
- "made": "2026-11-18"
+ "made": "2026-11-21"
 }
