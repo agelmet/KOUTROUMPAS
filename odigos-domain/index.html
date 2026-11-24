@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>vask.gr — Οδηγός σύνδεσης domain | Advon Media</title>
+<meta name="description" content="Οδηγός βήμα προς βήμα για τη σύνδεση του vask.gr με τη νέα ιστοσελίδα.">
+<link rel="icon" href="../favicon.ico">
+<style>
+@font-face{font-family:Manrope;font-weight:500;font-display:swap;src:url(../assets/fonts/manrope-greek-500-normal.woff2) format('woff2');unicode-range:U+0370-03FF,U+1F00-1FFF}
+@font-face{font-family:Manrope;font-weight:500;font-display:swap;src:url(../assets/fonts/manrope-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2190-21FF}
+@font-face{font-family:Manrope;font-weight:700;font-display:swap;src:url(../assets/fonts/manrope-greek-700-normal.woff2) format('woff2');unicode-range:U+0370-03FF,U+1F00-1FFF}
+@font-face{font-family:Manrope;font-weight:700;font-display:swap;src:url(../assets/fonts/manrope-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2190-21FF}
+:root{color-scheme:light only;--ink:#0F1A2B;--soft:#4A5568;--line:#E3E8EF;--paper:#F5F7FA;--blue:#1C6FD8;--cyan:#47C8F5;--red:#E22626;--green:#13865A;--amber:#B26A00}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:500 17px/1.6 Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{width:min(860px,calc(100% - 32px));margin:0 auto}
+header.top{background:#fff;border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:12px}
+.brand{font-weight:700;letter-spacing:.14em;font-size:13px;color:var(--ink);text-decoration:none}
+.brand b{color:var(--blue)}
+.tel{font-weight:700;color:var(--blue);text-decoration:none;font-size:15px;white-space:nowrap}
+.hero{padding:44px 0 28px}
+.kick{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:700;margin:0 0 10px}
+h1{font-size:clamp(28px,5vw,42px);line-height:1.15;margin:0 0 14px;letter-spacing:-.02em;text-wrap:balance}
+.lead{color:var(--soft);font-size:18px;margin:0;max-width:62ch;text-wrap:pretty}
+.choice{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:26px 0 8px}
+.opt{display:block;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 22px 20px;text-decoration:none;color:inherit;box-shadow:0 1px 2px rgba(15,26,43,.04);transition:transform .2s,box-shadow .2s,border-color .2s}
+@media (hover:hover){.opt:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(15,26,43,.08);border-color:#C9D6E6}}
+.opt .l{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--blue);color:#fff;font-weight:700;font-size:18px;margin-bottom:12px}
+.opt.b .l{background:var(--ink)}
+.opt h3{margin:0 0 6px;font-size:20px;line-height:1.3}
+.opt p{margin:0;color:var(--soft);font-size:15.5px}
+.opt .t{display:inline-block;margin-top:12px;font-size:13px;font-weight:700;color:var(--blue)}
+.opt.b .t{color:var(--ink)}
+.note{background:#fff;border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:12px;padding:16px 18px;margin:18px 0;font-size:16px}
+.note.warn{border-left-color:var(--red);background:#FFF7F7}
+.note.ok{border-left-color:var(--green);background:#F3FBF7}
+.note b{font-weight:700}
+section.part{padding:34px 0 10px;border-top:1px solid var(--line);margin-top:26px}
+h2{font-size:clamp(24px,4vw,32px);line-height:1.2;margin:0 0 6px;letter-spacing:-.015em}
+h2 .l{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--blue);color:#fff;font-size:19px;vertical-align:middle;margin-right:10px;transform:translateY(-3px)}
+#b h2 .l{background:var(--ink)}
+.sub{color:var(--soft);margin:0 0 18px}
+ol.steps{list-style:none;padding:0;margin:20px 0 0;counter-reset:s}
+ol.steps>li{counter-increment:s;position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 20px 20px 74px;margin:0 0 16px}
+ol.steps>li::before{content:counter(s);position:absolute;left:18px;top:18px;width:40px;height:40px;border-radius:50%;background:var(--red);color:#fff;font-weight:700;display:grid;place-items:center;font-size:18px;font-variant-numeric:tabular-nums}
+#b ol.steps>li::before{background:var(--ink)}
+ol.steps h4{margin:2px 0 6px;font-size:18.5px;line-height:1.35}
+ol.steps p{margin:6px 0;color:#2D3748}
+.shot{margin:14px 0 4px;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#EEE;cursor:zoom-in}
+.shot img{display:block;width:100%;height:auto}
+.shot.narrow{max-width:360px}
+.pair{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:12px;align-items:start}.pair .shot{margin:14px 0 4px}
+.cap{font-size:13.5px;color:var(--soft);margin:6px 0 0}
+.copy{display:flex;align-items:stretch;gap:0;margin:10px 0 4px;border:2px solid var(--blue);border-radius:12px;overflow:hidden;background:#F2F7FF;max-width:520px}
+.copy code{flex:1;font:700 19px/1.3 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;padding:12px 14px;color:var(--ink);word-break:break-all;user-select:all}
+.copy button{border:0;background:var(--blue);color:#fff;font:700 14px Manrope,system-ui,sans-serif;padding:0 16px;cursor:pointer;min-width:104px}
+.copy button.done{background:var(--green)}
+kbd,.btn{display:inline-block;font:700 14px Manrope,system-ui,sans-serif;background:#EEF2F7;border:1px solid #CBD5E1;border-bottom-width:2px;border-radius:7px;padding:1px 8px;white-space:nowrap}
+/* replica of the Papaki DNS table */
+.zone{margin:14px 0 6px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;font-size:14px}
+.zone .zh{background:#3B5BF2;color:#fff;padding:10px 14px;font-weight:700;letter-spacing:.02em}
+.zrow{display:grid;grid-template-columns:minmax(0,1.25fr) 70px minmax(0,1.9fr);gap:10px;align-items:center;padding:10px 14px;border-top:1px solid #EEF1F5}
+.zrow.head{font-weight:700;color:var(--soft);font-size:13px;background:#F8FAFC;border-top:0}
+.zrow .n,.zrow .v{border:1px solid #D7DDE5;border-radius:6px;padding:6px 9px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:#fff}
+.zrow .ty{border:1px solid #D7DDE5;border-radius:6px;padding:6px 8px;text-align:center;font-weight:700;font-size:13px}
+.zrow.fix{background:#FFF3F3;box-shadow:inset 5px 0 0 var(--red)}
+.zrow.fix .v{border:2px solid var(--red)}
+.zrow.keep{opacity:.55}
+.zrow .new{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:14px}
+.zrow .new s{color:#9B2C2C}
+.zrow .new b{color:var(--green);font-family:ui-monospace,Menlo,Consolas,monospace}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:99px;background:var(--red);color:#fff}
+.tag.k{background:#94A3B8}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13.5px;color:var(--soft);margin:8px 0 0}
+.msg{background:#fff;border:2px dashed #B7C3D3;border-radius:14px;padding:16px 18px;margin:10px 0 4px;white-space:pre-wrap;font-size:16px;line-height:1.6}
+.msgbar{display:flex;justify-content:flex-end;margin:6px 0 0}
+.msgbar button{border:0;background:var(--ink);color:#fff;font:700 14px Manrope,system-ui,sans-serif;padding:10px 16px;border-radius:10px;cursor:pointer}
+.msgbar button.done{background:var(--green)}
+.fill{background:#FFF1B8;border-radius:4px;padding:0 4px;font-weight:700}
+.vs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:16px 0}
+.vs div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
+.vs h4{margin:0 0 6px;font-size:16px}
+.vs ul{margin:0;padding-left:18px;color:#2D3748;font-size:15px}
+.vs li{margin:3px 0}
+footer{padding:34px 0 50px;color:var(--soft);font-size:14px;border-top:1px solid var(--line);margin-top:30px}
+footer a{color:var(--blue);font-weight:700;text-decoration:none}
+.lb{position:fixed;inset:0;background:rgba(10,16,26,.88);display:grid;place-items:center;padding:16px;z-index:9;cursor:zoom-out}
+.lb[hidden]{display:none}
+.lb img{max-width:100%;max-height:92vh;border-radius:10px;background:#fff}
+@media (max-width:700px){
+ body{font-size:16px}
+ .choice,.vs{grid-template-columns:minmax(0,1fr)}
+ ol.steps>li{padding:62px 16px 16px}
+ ol.steps>li::before{left:16px;top:14px}
+ .zrow{grid-template-columns:minmax(0,1fr) 62px;}
+ .zrow .v{grid-column:1/-1}
+ .copy code{font-size:15px;padding:11px 12px;word-break:normal;overflow-wrap:anywhere}
+ .copy button{min-width:88px;padding:0 12px}
+ .zrow.head{display:none}
+ .pair{grid-template-columns:minmax(0,1fr)}
+}
+@media print{
+ body{background:#fff;font-size:12pt}
+ header.top .tel,.copy button,.msgbar,.lb{display:none!important}
+ .opt,ol.steps>li,.note,.zone,.vs div{break-inside:avoid;box-shadow:none}
+ section.part{break-before:page;border-top:0;margin-top:0}
+ .shot{cursor:default}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <a class="brand" href="https://advonmedia.com"><b>ADVON</b> MEDIA</a>
+ <a class="tel" href="tel:+306934088046">693 408 8046</a>
+</div></header>
+
+<main class="wrap">
+<div class="hero">
+ <p class="kick">Οδηγός για τον κ. Κουτρούμπα · vask.gr</p>
+ <h1>Πώς θα ανοίγει η νέα ιστοσελίδα στο vask.gr</h1>
+ <p class="lead">Το vask.gr είναι στον δικό σας λογαριασμό στο Papaki. Για να εμφανίζεται εκεί η νέα ιστοσελίδα, υπάρχουν δύο εύκολοι δρόμοι. Διαλέξτε όποιον σας βολεύει — κανένας δεν χρειάζεται τεχνικές γνώσεις.</p>
+
+ <div class="choice">
+  <a class="opt" href="#a"><span class="l">Α</span><h3>Το συνδέετε μόνος σας</h3><p>Αλλάζετε 2 γραμμές στο Papaki. Το domain μένει στον λογαριασμό σας και το πληρώνετε εσείς, όπως τώρα.</p><span class="t">≈ 10 λεπτά · 8 βήματα ↓</span></a>
+  <a class="opt b" href="#b"><span class="l">Β</span><h3>Το μεταφέρετε σε εμάς</h3><p>Στέλνετε ένα μήνυμα στο Papaki και αναλαμβάνουμε εμείς τα πάντα: σύνδεση και ανανεώσεις.</p><span class="t">≈ 5 λεπτά · 5 βήματα ↓</span></a>
+ </div>
+
+ <div class="note ok"><b>Το email σας info@vask.gr δεν επηρεάζεται</b> και με τους δύο τρόπους. Αλλάζουμε μόνο το πού «δείχνει» η ιστοσελίδα — τα email, οι λογαριασμοί και το domain μένουν όπως είναι. Και το vask.gr παραμένει δικό σας, στο όνομά σας.</div>
+</div>
+
+<!-- ============ OPTION A ============ -->
+<section class="part" id="a">
+ <h2><span class="l">Α</span>Το συνδέετε μόνος σας</h2>
+ <p class="sub">Θα αλλάξετε μόνο δύο γραμμές. Όλα τα υπόλοιπα τα αφήνετε ακριβώς όπως είναι.</p>
+
+ <div class="note warn"><b>Πότε το κάνετε:</b> μόνο όταν σας στείλουμε μήνυμα «Είμαστε έτοιμοι». Αν αλλάξετε τις γραμμές νωρίτερα, η σημερινή σας ιστοσελίδα θα σταματήσει να ανοίγει μέχρι να ανέβει η νέα. Μέχρι τότε απλώς κρατήστε τον οδηγό.</div>
+
+ <ol class="steps">
+  <li>
+   <h4>Μπείτε στον λογαριασμό σας στο Papaki</h4>
+   <p>Ανοίξτε το <b>papaki.com</b>, πατήστε <span class="btn">Client Area</span> πάνω δεξιά και συνδεθείτε με το email και τον κωδικό που χρησιμοποιείτε στο Papaki.</p>
+   <p class="cap">Αν δεν θυμάστε τον κωδικό, πατήστε «Ξέχασα τον κωδικό» στη σελίδα σύνδεσης — θα σας έρθει email.</p>
+  </li>
+  <li>
+   <h4>Πατήστε στο <b>vask.gr</b></h4>
+   <p>Στη λίστα «Τα προϊόντα σου» βρείτε το <b>vask.gr</b> και πατήστε πάνω του. Αν έχετε πολλά, γράψτε <b>vask</b> στην αναζήτηση.</p>
+   <figure class="shot narrow"><img src="img/01-proionta.webp" width="606" height="676" alt="Η λίστα «Τα προϊόντα σου» στο Papaki με το vask.gr σημειωμένο"></figure>
+  </li>
+  <li>
+   <h4>Πατήστε <b>DOMAIN &amp; DNS</b> (το «σπιτάκι»)</h4>
+   <p>Ανοίγει η σελίδα του vask.gr. Πατήστε το πρώτο εικονίδιο, το σπιτάκι με την ετικέτα <b>DOMAIN &amp; DNS</b>. Αν στην επόμενη οθόνη δείτε κουμπί <span class="btn">Διαμόρφωση DNS</span>, πατήστε το.</p>
+   <figure class="shot"><img src="img/02-domain-dns.webp" width="1400" height="440" alt="Η σελίδα του vask.gr στο Papaki με το εικονίδιο DOMAIN & DNS σημειωμένο"></figure>
+  </li>
+  <li>
+   <h4>Επιβεβαίωση με κωδικό στο email σας</h4>
+   <p>Το Papaki θα σας ζητήσει να επιβεβαιώσετε ότι είστε εσείς. Πατήστε <span class="btn">EMAIL</span>. Θα σας έρθει στο email σας ένας <b>6ψήφιος κωδικός</b> — γράψτε τον εκεί που σας ζητείται.</p>
+   <figure class="shot"><img src="img/04-email.webp" width="1100" height="782" alt="Η οθόνη «Επιβεβαιώστε την ταυτότητά σας» του Papaki με το κουμπί EMAIL σημειωμένο"></figure>
+   <p class="cap">Αν δεν φτάσει σε 2 λεπτά, κοιτάξτε και στα «Ανεπιθύμητα» (spam).</p>
+  </li>
+  <li>
+   <h4>Πατήστε <b>Επεξεργασία ζώνης DNS</b></h4>
+   <figure class="shot"><img src="img/05-epexergasia-zonis.webp" width="1100" height="660" alt="Η σελίδα «Ρυθμίσεις DNS domain» με τον σύνδεσμο «Επεξεργασία ζώνης DNS» σημειωμένο"></figure>
+   <p>Θα ανοίξει ένας πίνακας με γραμμές (στήλες: Όνομα · TTL · Τύπος · Τιμή). Από αυτές θα αλλάξετε <b>μόνο δύο</b> — δείτε παρακάτω.</p>
+  </li>
+  <li>
+   <h4>Γραμμή <b>vask.gr</b> με Τύπο <b>A</b> — αλλάξτε την Τιμή</h4>
+   <p>Βρείτε τη γραμμή όπου το Όνομα είναι σκέτο <b>vask.gr</b> και ο Τύπος είναι <b>A</b>. Δεξιά, στο κουτάκι «Τιμή», σήμερα γράφει <b>213.158.90.92</b>. Σβήστε το και γράψτε ακριβώς:</p>
+   <div class="copy"><code>75.2.60.5</code><button type="button" data-c="75.2.60.5">Αντιγραφή</button></div>
+  </li>
+  <li>
+   <h4>Γραμμή <b>www.vask.gr</b> με Τύπο <b>CNAME</b> — αλλάξτε την Τιμή</h4>
+   <p>Βρείτε τη γραμμή <b>www.vask.gr</b> με Τύπο <b>CNAME</b>. Σήμερα στην Τιμή γράφει κάτι μεγάλο που τελειώνει σε <b>…azurewebsites.net</b>. Σβήστε το όλο και γράψτε ακριβώς:</p>
+   <div class="copy"><code>vask-gr.netlify.app</code><button type="button" data-c="vask-gr.netlify.app">Αντιγραφή</button></div>
+   <p>Αν δεν τη βλέπετε, είναι στη <b>2η σελίδα</b> του πίνακα: πατήστε το βελάκι <b>&gt;</b> κάτω αριστερά (ή γράψτε <b>www</b> στο κουτάκι «Αναζήτηση» πάνω από τον πίνακα).</p>
+
+   <div class="zone" aria-label="Πώς θα πρέπει να είναι ο πίνακας μετά την αλλαγή">
+    <div class="zh">Έτσι μοιάζει ο πίνακας του vask.gr — αλλάζετε μόνο τα κόκκινα</div>
+    <div class="zrow head"><span>Όνομα</span><span>Τύπος</span><span>Τιμή</span></div>
+    <div class="zrow keep"><span class="n">vask.gr</span><span class="ty">NS</span><span class="v">ns1137.papaki.gr.</span></div>
+    <div class="zrow fix"><span class="n">vask.gr</span><span class="ty">A</span><span class="v">75.2.60.5</span>
+      <span class="new"><span class="tag">αλλάζει</span> <s>213.158.90.92</s> → <b>75.2.60.5</b></span></div>
+    <div class="zrow keep"><span class="n">vask.gr</span><span class="ty">MX</span><span class="v">10 · mail.vask.gr.</span></div>
+    <div class="zrow keep"><span class="n">vask.gr</span><span class="ty">TXT</span><span class="v">v=spf1 +a +mx include:_spf.fastmail.gr -all</span></div>
+    <div class="zrow keep"><span class="n">mail.vask.gr</span><span class="ty">A</span><span class="v">213.158.90.250</span></div>
+    <div class="zrow keep"><span class="n">webmail.vask.gr</span><span class="ty">A</span><span class="v">213.158.90.250</span></div>
+    <div class="zrow fix"><span class="n">www.vask.gr</span><span class="ty">CNAME</span><span class="v">vask-gr.netlify.app</span>
+      <span class="new"><span class="tag">αλλάζει</span> <s>vask-e8avbffmgyded5dz…azurewebsites.net.</s> → <b>vask-gr.netlify.app</b></span></div>
+   </div>
+   <div class="legend"><span><span class="tag">αλλάζει</span> το αλλάζετε</span><span><span class="tag k">μένει</span> οι γκρι γραμμές μένουν όπως είναι — εκεί είναι το email σας</span></div>
+   <div class="note warn"><b>Μην σβήσετε καμία γραμμή</b> (το καλαθάκι δεξιά) και μην πειράξετε τις γραμμές <b>MX</b>, <b>TXT</b>, <b>mail</b> και <b>webmail</b>. Μπορεί να δείτε και άλλες γραμμές που δεν είναι εδώ — αφήστε τις κι αυτές όπως είναι.</div>
+  </li>
+  <li>
+   <h4>Πατήστε <b>Αποθήκευση</b> κάτω δεξιά</h4>
+   <p>Το πιο σημαντικό βήμα: χωρίς αυτό δεν κρατιέται τίποτα. Το κουμπί <span class="btn">Αποθήκευση</span> είναι κάτω δεξιά από τον πίνακα (δίπλα στο <b>Page 1 of 2</b> αριστερά είναι τα βελάκια για τις σελίδες).</p>
+   <div class="pair"><figure class="shot"><img src="img/08a-selida.webp" width="860" height="116" alt="Τα βελάκια σελίδας κάτω αριστερά από τον πίνακα DNS"><figcaption class="cap" style="padding:6px 10px;background:#fff">Αριστερά: αλλαγή σελίδας</figcaption></figure><figure class="shot"><img src="img/08b-apothikefsi.webp" width="580" height="116" alt="Το κουμπί Αποθήκευση κάτω δεξιά από τον πίνακα DNS"><figcaption class="cap" style="padding:6px 10px;background:#fff">Δεξιά: <b>Αποθήκευση</b></figcaption></figure></div>
+   <p>Μετά στείλτε μας ένα σύντομο μήνυμα «Έγινε» και τα υπόλοιπα τα κάνουμε εμείς. Η αλλαγή χρειάζεται από λίγα λεπτά έως μερικές ώρες για να φανεί παντού.</p>
+  </li>
+ </ol>
+ <div class="note">Κόλλησε κάτι ή δεν βλέπετε μια γραμμή; Στείλτε μας μια φωτογραφία της οθόνης σας στο Viber (<a href="tel:+306934088046">693 408 8046</a>) και σας λέμε ακριβώς πού να πατήσετε. Αν κάτι γράψετε λάθος, δεν χαλάει τίποτα μόνιμα — διορθώνεται.</div>
+</section>
+
+<!-- ============ OPTION B ============ -->
+<section class="part" id="b">
+ <h2><span class="l">Β</span>Το μεταφέρετε σε εμάς</h2>
+ <p class="sub">Επειδή και εσείς και εμείς είμαστε στο Papaki, δεν χρειάζεται «κωδικός μεταφοράς». Αρκεί να ζητήσετε από το Papaki να περάσει η διαχείριση του vask.gr στον λογαριασμό μας. Μπορείτε να το κάνετε από σήμερα — η τωρινή σας ιστοσελίδα δεν επηρεάζεται.</p>
+
+ <ol class="steps">
+  <li>
+   <h4>Μπείτε στον λογαριασμό σας στο Papaki</h4>
+   <p>Όπως στο βήμα 1 πάνω: <b>papaki.com</b> → <span class="btn">Client Area</span> → σύνδεση.</p>
+  </li>
+  <li>
+   <h4>Πατήστε <b>Υποστήριξη</b></h4>
+   <p>Στο μενού αριστερά πατήστε <b>Υποστήριξη</b> και ανοίξτε ένα νέο αίτημα (ticket). Αν ρωτήσει κατηγορία, διαλέξτε <b>Domain names</b>.</p>
+  </li>
+  <li>
+   <h4>Θέμα: «Αλλαγή διαχειριστή domain vask.gr»</h4>
+   <div class="copy"><code>Αλλαγή διαχειριστή domain vask.gr</code><button type="button" data-c="Αλλαγή διαχειριστή domain vask.gr">Αντιγραφή</button></div>
+  </li>
+  <li>
+   <h4>Επικολλήστε αυτό το μήνυμα και πατήστε Αποστολή</h4>
+<div class="msg" id="msgB">Καλησπέρα σας,
+
+θα ήθελα να μεταφερθεί η διαχείριση του domain vask.gr από τον λογαριασμό μου στον λογαριασμό Papaki με κωδικό χρέωσης <span class="fill" data-bc>[ο κωδικός μας]</span> (Advon Media – ΜΕΤΡΙΔΗΣ ΑΓΓΕΛΟΣ).
+
+Η ιδιοκτησία του domain παραμένει σε εμένα· αλλάζει μόνο ο διαχειριστής. Παρακαλώ να μεταφερθεί μαζί και η υπηρεσία email του domain, ώστε να συνεχίσει να λειτουργεί κανονικά.
+
+Ευχαριστώ,
+Βασίλης Κουτρούμπας</div>
+   <div class="msgbar"><button type="button" data-msg="msgB">Αντιγραφή μηνύματος</button></div>
+  </li>
+  <li>
+   <h4>Ενημερώστε μας ότι το στείλατε</h4>
+   <p>Το Papaki μπορεί να σας ζητήσει να επιβεβαιώσετε το αίτημα από το email σας — απλώς πατήστε τον σύνδεσμο που θα σας στείλει. Μόλις το vask.gr εμφανιστεί στον λογαριασμό μας (συνήθως 1–2 εργάσιμες), τα υπόλοιπα τα κάνουμε εμείς: σύνδεση με τη νέα ιστοσελίδα και ανανεώσεις κάθε χρόνο.</p>
+  </li>
+ </ol>
+</section>
+
+<section class="part" id="diafores" style="break-before:auto">
+ <h2>Ποιο να διαλέξω;</h2>
+ <div class="vs">
+  <div><h4>Α · Το συνδέετε μόνος σας</h4><ul><li>Το domain μένει στον λογαριασμό σας</li><li>Την ανανέωσή του την πληρώνετε εσείς στο Papaki, όπως τώρα</li><li>Το κάνετε τη μέρα που θα σας πούμε</li></ul></div>
+  <div><h4>Β · Το μεταφέρετε σε εμάς</h4><ul><li>Δεν χρειάζεται να πειράξετε τίποτα τεχνικό</li><li>Την ανανέωση την αναλαμβάνουμε εμείς</li><li>Μπορείτε να το κάνετε από σήμερα</li></ul></div>
+ </div>
+ <p class="sub">Και στις δύο περιπτώσεις το vask.gr είναι και μένει δικό σας, και το email σας συνεχίζει να δουλεύει.</p>
+</section>
+</main>
+
+<footer><div class="wrap">Advon Media · <a href="https://advonmedia.com">advonmedia.com</a> · <a href="tel:+306934088046">693 408 8046</a></div></footer>
+
+<div class="lb" hidden><img alt=""></div>
+<script>
+(function(){
+ function cp(t,b,l){var done=function(){b.textContent='Αντιγράφηκε ✓';b.classList.add('done');setTimeout(function(){b.textContent=l;b.classList.remove('done')},1800)};
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(done,function(){fb(t);done()})}else{fb(t);done()}}
+ function fb(t){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove()}
+ document.querySelectorAll('[data-c]').forEach(function(b){b.addEventListener('click',function(){cp(b.dataset.c,b,'Αντιγραφή')})});
+ document.querySelectorAll('[data-msg]').forEach(function(b){b.addEventListener('click',function(){cp(document.getElementById(b.dataset.msg).innerText.trim(),b,'Αντιγραφή μηνύματος')})});
+ var lb=document.querySelector('.lb'),li=lb.querySelector('img');
+ document.querySelectorAll('.shot img').forEach(function(i){i.addEventListener('click',function(){li.src=i.src;li.alt=i.alt;lb.hidden=false})});
+ lb.addEventListener('click',function(){lb.hidden=true});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.hidden=true});
+})();
+</script>
+</body>
+</html>
